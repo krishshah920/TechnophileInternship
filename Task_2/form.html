@@ -1,98 +1,257 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Sign up to {this}</title>
-        <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+        <title>Survey Form</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">        <link rel="stylesheet" type="text/css" href="stylesheet.css" />
         <script type="text/javascript" src="script.js"></script>
     </head>
     <body>
+      <div class="testbox">
+      <form action="#">
+        <div class="banner">
+          <h1>Survey Form</h1>
+        </div>
+        <div class="item">
+          <p>Name <span class="required">*</span></p>
+          <i class="far fa-user icon"></i>
+          <input type="text" name="name" required/>
+        </div>
+        <div class="item">
+          <p>Email<span class="required">*</span></p>
+          <i class="far fa-envelope icon"></i>
+          <input type="email" name="email" required/>   
+        </div>
+        <div class="item">
+          <p>Phone<span class="required">*</span></p>
+          <i class="fas fa-mobile-alt icon"></i>
+          <input type="phone" name="phone" required/>
+        </div>
         
-            <!-- <form method="post" target="#" onsubmit="return validate()"> -->
-                    <div class="testbox">
-                        <form method="post" target="#" onsubmit="return validate()">
-                          <div class="banner">
-                            <h1><strong>Survey Form</strong></h1>
-                          </div>
-                          <div class="item">
-                            <label for="name">Name<span>*</span></label>
-                            <input id="name" type="text" name="name" required/>
-                          </div>
-                          <div class="item">
-                            <label for="email">Email Address<span>*</span></label>
-                            <input id="email" type="email" name="email" required/>
-                          </div>
-                          <div class="item">
-                            <label for="attendees">Number of Attendees <span>*</span></label>
-                            <input id="attendess" type="text" name="attendees" required/>
-                          </div>
-                          <div class="item">
-                            <label for="position">Position<span>*</span></label>
-                            <input id="position" type="text" name="position" required/>
-                          </div>
-                          <div class="item">
-                            <label for="department">Department<span>*</span></label>
-                            <input id="department" type="text" name="department" required/>
-                          </div>
-                          <div class="item">
-                            <label for="phone">Phone<span>*</span></label>
-                            <input id="phone" type="number" placeholder="(XXX) XXX-XXXX"  name="phone" required/>
-                          </div>
-                          <div class="item">
-                            <label for="bdate">Date<span>*</span></label>
-                            <input id="bdate" type="date" name="bdate" required/>
-                            <i class="fas fa-calendar-alt"></i>
-                          </div>
-                          <div class="flax">
-                            <div class="item">
-                              <p>Start Time</p>
-                              <select>
-                                <option selected value="" disabled selected></option>
-                                <option value="8A" >8 AM</option>
-                                <option value="9A">9 AM</option>
-                                <option value="10A">10 AM</option>
-                                <option value="11A">11 Am</option>
-                                <option value="12P">12 Pm</option>
-                                <option value="1P">1 Pm</option>
-                                <option value="2P">2 Pm</option>
-                                <option value="3P">3 Pm</option>
-                                <option value="4P">4 Pm</option>
-                                <option value="5P">5 Pm</option>
-                                <option value="6P">6 Pm</option>
-                                <option value="7P">7 Pm</option>
-                                <option value="8P">8 Pm</option>
-                              </select>
-                            </div>
-                            <div class="item">
-                              <p>End Time</p>
-                              <select>
-                                <option selected value="" disabled selected></option>
-                                <option value="8A" >8 AM</option>
-                                <option value="9A">9 AM</option>
-                                <option value="10A">10 AM</option>
-                                <option value="11A">11 Am</option>
-                                <option value="12P">12 Pm</option>
-                                <option value="1P">1 Pm</option>
-                                <option value="2P">2 Pm</option>
-                                <option value="3P">3 Pm</option>
-                                <option value="4P">4 Pm</option>
-                                <option value="5P">5 Pm</option>
-                                <option value="6P">6 Pm</option>
-                                <option value="7P">7 Pm</option>
-                                <option value="8P">8 Pm</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <label for="instructions">Suggestions   </label>
-                            <textarea id="instructions" rows="3"></textarea>
-                          </div>
-                          <p><small>0/100 characters</small></p>
-                          <div class="btn-block">
-                            <button type="submit" href="/">Submit</button>
-                          </div>
-                        </form>
-                      </div>
+        <div class="item">
+          <p>Date<span class="required">*</span></p>
+          <i class="far fa-calendar-alt icon"></i>
+          <input type="date" name="bdate" required/>
+        </div>
+        <div class="question">
+          <p>Gender:<span class="required">*</span></p>
+          <div>
+            <i class="fas fa-male icon"></i>
+            <input type="radio" value="none" id="radio_1" name="gender" required/>
+            <label for="radio_1" class="radio"><span>Male</span></label>
+            <i class="fas fa-female icon"></i>
+            <input type="radio" value="none" id="radio_2" name="gender" required/>
+            <label for="radio_2" class="radio"><span>Female</span></label>
+          </div>
+        </div>
+        <div class="item">
+          <p >Department<span class="required">*</span></p>
+          <div class="city-item">
+            <select required>
+              <option value="">CSE</option>
+              <option value="1">ISE</option>
+              <option value="2">ECE</option>
+              <option value="3">EEE</option>
+              <option value="4">ME</option>
+              <option value="5">CIV</option>
+            </select>
+          </div>
+        </div>
+        <div class="question">
+          <p >Was it easy to obtain the necessary resources from the college library?<span class="required">*</span></p>
+            <div class="question-answer">
+              <i class="far fa-check-circle icon"></i>
+              <input type="radio" value="none" id="radio_5" name="library" required/>
+              <label for="radio_5" class="radio"><span>Yes</span></label>
+              <i class="far fa-times-circle icon"></i>
+              <input type="radio" value="none" id="radio_6" name="library" required/>
+              <label for="radio_6" class="radio"><span>No</span></label>
+            </div>
+        </div>
+        <div class="question">
+          <p>Are you satisfied with the teaching staff and their teaching practices?<span class="required">*</span></p>
+          <div class="question-answer">
+            <i class="far fa-check-circle icon"></i>
+            <input type="radio" value="none" id="radio_7" name="teaching"/>
+            <label for="radio_7" class="radio"><span>Yes</span></label>
+            <i class="far fa-times-circle icon"></i>
+            <input type="radio" value="none" id="radio_8" name="teaching"/>
+            <label for="radio_8" class="radio"><span>No</span></label>
+          </div>
+        </div>
+        
+        <div class="question">
+          <p>How satisfied are you with the facilities provided by the college?<span class="required">*</span></p>
+          <div class="question-answer">
+            <input type="radio" value="none" id="radio_9" name="teaching"/>
+            <label for="radio_9" class="radio"><span>Extremely Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_10" name="teaching"/>
+            <label for="radio_10" class="radio"><span>Very Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_11" name="teaching"/>  
+            <label for="radio_11" class="radio"><span>Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_12" name="teaching"/>
+            <label for="radio_12" class="radio"><span>Neutral</span></label><br>
+            <input type="radio" value="none" id="radio_13" name="teaching"/>
+            <label for="radio_13" class="radio"><span> Dissatisfied</span></label><br>
+            <input type="radio" value="none" id="radio_14" name="teaching"/>
+            <label for="radio_14" class="radio"><span>Very Dissatisfied</span></label><br>
+            <input type="radio" value="none" id="radio_15" name="teaching"/>
+            <label for="radio_15" class="radio"><span>Extremely Satisfied</span></label>
+          </div>
+        </div>
+        <div class="question">
+          <p>Do you feel it is easier to register for different courses within the college?<span class="required">*</span></p>
+          <div class="question-answer">
+            <input type="radio" value="none" id="radio_16" name="teaching"/>
+            <label for="radio_16" class="radio"><span>Extremely Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_17" name="teaching"/>
+            <label for="radio_17" class="radio"><span>Very Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_18" name="teaching"/>
+            <label for="radio_18" class="radio"><span>Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_19" name="teaching"/>
+            <label for="radio_19" class="radio"><span>Neutral</span></label><br>
+            <input type="radio" value="none" id="radio_20" name="teaching"/>
+            <label for="radio_20" class="radio"><span> Dissatisfied</span></label><br>
+            <input type="radio" value="none" id="radio_21" name="teaching"/>
+            <label for="radio_21" class="radio"><span>Very Dissatisfied</span></label><br>
+            <input type="radio" value="none" id="radio_22" name="teaching"/>
+            <label for="radio_22" class="radio"><span>Extremely Satisfied</span></label>
+          </div>
+        </div> <div class="question">
+          <p>How satisfied are you with the cleanliness and variety of food items available in the cafeteria?<span class="required">*</span></p>
+          <div class="question-answer">
+            <input type="radio" value="none" id="radio_23" name="teaching"/>
+            <label for="radio_23" class="radio"><span>Extremely Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_24" name="teaching"/>
+            <label for="radio_24" class="radio"><span>Very Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_25" name="teaching"/>
+            <label for="radio_25" class="radio"><span>Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_26" name="teaching"/>
+            <label for="radio_26" class="radio"><span>Neutral</span></label><br>
+            <input type="radio" value="none" id="radio_27" name="teaching"/>
+            <label for="radio_27" class="radio"><span> Dissatisfied</span></label><br>
+            <input type="radio" value="none" id="radio_28" name="teaching"/>
+            <label for="radio_28" class="radio"><span>Very Dissatisfied</span></label><br>
+            <input type="radio" value="none" id="radio_29" name="teaching"/>
+            <label for="radio_29" class="radio"><span>Extremely Satisfied</span></label>
+          </div>
+        </div> <div class="question">
+          <p>How supportive were the faculty members?<span class="required">*</span></p>
+          <div class="question-answer">
+            <input type="radio" value="none" id="radio_30" name="teaching"/>
+            <label for="radio_30" class="radio"><span>Extremely Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_31" name="teaching"/>
+            <label for="radio_31" class="radio"><span>Very Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_32" name="teaching"/>
+            <label for="radio_32" class="radio"><span>Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_33" name="teaching"/>
+            <label for="radio_33" class="radio"><span>Neutral</span></label><br>
+            <input type="radio" value="none" id="radio_34" name="teaching"/>
+            <label for="radio_34" class="radio"><span> Dissatisfied</span></label><br>
+            <input type="radio" value="none" id="radio_35" name="teaching"/>
+            <label for="radio_35" class="radio"><span>Very Dissatisfied</span></label><br>
+            <input type="radio" value="none" id="radio_36" name="teaching"/>
+            <label for="radio_36" class="radio"><span>Extremely Satisfied</span></label>
+          </div>
+        </div> <div class="question">
+          <p>What do you think of the hostel?<span class="required">*</span></p>
+          <div class="question-answer">
+            <input type="radio" value="none" id="radio_37" name="teaching"/>
+            <label for="radio_37" class="radio"><span>Extremely Crowded</span></label><br>
+            <input type="radio" value="none" id="radio_38" name="teaching"/>
+            <label for="radio_38" class="radio"><span>Very Crowded</span></label><br>
+            <input type="radio" value="none" id="radio_39" name="teaching"/>
+            <label for="radio_39" class="radio"><span>Somewhat Crowded</span></label><br>
+            <input type="radio" value="none" id="radio_40" name="teaching"/>
+            <label for="radio_40" class="radio"><span>Not So Crowded</span></label><br>
+            <input type="radio" value="none" id="radio_41" name="teaching"/>
+            <label for="radio_41" class="radio"><span> Not at all Crowded</span></label><br>
+          </div>
+        </div> <div class="question">
+          <p>How likely are you to continue attending this college next year?<span class="required">*</span></p>
+          <div class="question-answer">
+            <input type="radio" value="none" id="radio_42" name="teaching"/>
+            <label for="radio_42" class="radio"><span>Extremely Likely</span></label><br>
+            <input type="radio" value="none" id="radio_43" name="teaching"/>
+            <label for="radio_43" class="radio"><span>Very Likely</span></label><br>
+            <input type="radio" value="none" id="radio_44" name="teaching"/>
+            <label for="radio_44" class="radio"><span>Somewhat Likely</span></label><br>
+            <input type="radio" value="none" id="radio_45" name="teaching"/>
+            <label for="radio_45" class="radio"><span>not So Likely</span></label><br>
+            <input type="radio" value="none" id="radio_46" name="teaching"/>
+            <label for="radio_46" class="radio"><span> Not at all Likely</span></label><br>
+          </div>
+        </div> 
+        <div class="question">
+          <p> How satisfied are you with the accommodation?<span class="required">*</span></p>
+          <div class="question-answer">
+            <input type="radio" value="none" id="radio_47" name="teaching"/>
+            <label for="radio_47" class="radio"><span>Extremely Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_48" name="teaching"/>
+            <label for="radio_48" class="radio"><span>Very Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_49" name="teaching"/>
+            <label for="radio_49" class="radio"><span>Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_50" name="teaching"/>
+            <label for="radio_50" class="radio"><span>Neutral</span></label><br>
+            <input type="radio" value="none" id="radio_51" name="teaching"/>
+            <label for="radio_51" class="radio"><span> Dissatisfied</span></label><br>
+            <input type="radio" value="none" id="radio_52" name="teaching"/>
+            <label for="radio_52" class="radio"><span>Very Dissatisfied</span></label><br>
+            <input type="radio" value="none" id="radio_53" name="teaching"/>
+            <label for="radio_53" class="radio"><span>Extremely Satisfied</span></label>
+          </div>
+        </div> <div class="question">
+          <p>Given a chance, are you willing to pursue another course at the college?<span class="required">*</span></p>
+          <div class="question-answer">
+            <input type="radio" value="none" id="radio_54" name="teaching"/>
+            <label for="radio_54" class="radio"><span>Extremely Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_55" name="teaching"/>
+            <label for="radio_55" class="radio"><span>Very Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_56" name="teaching"/>
+            <label for="radio_56" class="radio"><span>Satisfied</span></label><br>
+            <input type="radio" value="none" id="radio_57" name="teaching"/>
+            <label for="radio_57" class="radio"><span>Neutral</span></label><br>
+            <input type="radio" value="none" id="radio_58" name="teaching"/>
+            <label for="radio_58" class="radio"><span> Dissatisfied</span></label><br>
+            <input type="radio" value="none" id="radio_59" name="teaching"/>
+            <label for="radio_59" class="radio"><span>Very Dissatisfied</span></label><br>
+            <input type="radio" value="none" id="radio_60" name="teaching"/>
+            <label for="radio_60" class="radio"><span>Extremely Satisfied</span></label>
+          </div>
+        </div> <div class="question">
+          <p>How satisfied are you with the facilities provided by the college?<span class="required">*</span></p>
+          <div class="question-answer">
+            <input type="radio" value="none" id="radio_61" name="teaching"/>
+            <label for="radio_61" class="radio"><span>Definitely Yes</span></label><br>
+            <input type="radio" value="none" id="radio_62" name="teaching"/>
+            <label for="radio_62" class="radio"><span>Probably Yes</span></label><br>
+            <input type="radio" value="none" id="radio_63" name="teaching"/>
+            <label for="radio_63" class="radio"><span>Probably No</span></label><br>
+            <input type="radio" value="none" id="radio_64" name="teaching"/>
+            <label for="radio_64" class="radio"><span>Definitely no</span></label><br>
+            <input type="radio" value="none" id="radio_65" name="teaching"/>
+            <label for="radio_65" class="radio"><span> Can't Say</span></label><br>
+          </div>
+        </div>
 
-        <script src="./script.js"></script>
+    
+          <div class="item">
+            <p>Suggestions<span class="required">*</span></p>
+            <textarea rows="3" required></textarea>
+          </div>
+          <div class="question">
+            
+            <div class="question-answer checkbox-item">
+              <div>
+                <input type="checkbox" value="none" id="check_9" name="check" required/>
+                <label for="check_9" class="check"><span>I agree to the <a href="#">terms of service.</a></span></label>
+              </div>
+            </div>
+          </div>
+          <div class="btn-block">
+            <button type="submit" href="/">Submit</button>
+          </div>
+      </form>
+      </div>
     </body>
 </html>
